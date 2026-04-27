@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 60vh;
+  background-color: #e3f2fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #343a40;
+}
+
+/* Social icon hover */
+.social-icon i {
+  transition: transform 0.3s;
+}
+.social-icon:hover i {
+  transform: scale(1.3);
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* Progress Bars */
+.progress-bar {
+  width: 0%;
+  transition: width 2s;
+}
+
+/* Skill Circle */
+.skill-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  background: conic-gradient(#0d6efd 0deg, #e9ecef 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #343a40;
+  transition: transform 0.3s;
+}
+
+.skill-circle:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.skill-value {
+  position: absolute;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Skill Colors Override */
+.skill-circle.bg-success { background: conic-gradient(#198754 0deg, #e9ecef 0deg); }
+.skill-circle.bg-info { background: conic-gradient(#0dcaf0 0deg, #e9ecef 0deg); }

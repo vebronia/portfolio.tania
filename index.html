@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Vitania Lusi</title>  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* HERO SECTION */
+    .hero-section {
+      padding: 60px 0;
+      background-color: #e3f2fd;
+    }
+    .hero-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border: 4px solid #679ae7;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .hero-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* SOCIAL LINK */
+    .social-icon {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #000;
+      transition: transform 0.3s;
+    }
+    .social-icon:hover {
+      transform: scale(1.1);
+      color: #0d6efd;
+    }
+
+    /* SKILL SECTION */
+    .skill-container { max-width: 700px; margin: auto; }
+    .skill { margin-bottom: 25px; }
+    .skill-name { font-weight: 600; margin-bottom: 8px; font-size: 1.1rem; }
+    .skill-bar {
+      background-color: #e9ecef;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 28px;
+      position: relative;
+    }
+    .skill-progress {
+      height: 100%;
+      width: 0;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 28px;
+      color: white;
+      font-weight: 600;
+      border-radius: 12px;
+      transition: width 1.5s ease-in-out;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    /* CARDS */
+    .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+    .card-img-top { object-fit: cover; height: 200px; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Vitania Lusi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates & Dokumentasi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="hero-section d-flex align-items-center text-center text-dark">
+    <div class="container">
+      <h1>Vitania Lusi</h1>
+      <p class="lead">Mahasiswa Sistem Informasi</p>
+      <img src="assets/profile.jpg" alt="Profile Picture" class="rounded-circle hero-img my-3">
+
+      <!-- Instagram Link -->
+      <div class="social-links mt-3">
+        <a href="https://www.instagram.com/todayis_taniadella" target="_blank" class="social-icon d-flex align-items-center justify-content-center">
+          <i class="fab fa-instagram fa-2x me-2"></i> @todayis_taniadella
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-5" style="background-color:#f8f9fa;">
+    <div class="container">
+      <h2 class="text-center mb-4">About Me</h2>
+      <p class="text-center">Hi! Aku Vitania Lusi, mahasiswa Sistem Informasi semester 4 di Fakultas Teknik, Universitas Mulawarman. Aku tertarik dengan bidang teknologi dan selalu bersemangat belajar hal-hal baru terkait sistem informasi. Selain itu, aku juga suka menjadi Master of Ceremony (MC) di berbagai acara.</p>
+
+      <h4 class="mt-4 mb-4 text-center">Skills & Minat</h4>
+
+      <div class="skill-container">
+        <div class="skill">
+          <div class="skill-name">MC / Public Speaking</div>
+          <div class="skill-bar" data-percent="95">
+            <div class="skill-progress bg-primary">0%</div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Kerja Sama Tim</div>
+          <div class="skill-bar" data-percent="90">
+            <div class="skill-progress bg-success">0%</div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Manajemen Waktu</div>
+          <div class="skill-bar" data-percent="85">
+            <div class="skill-progress bg-info">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates & Dokumentasi -->
+  <section id="certificates" class="py-5" style="background-color:#f1f3f5;">
+    <div class="container">
+      <h2 class="text-center mb-4">Certificates & Dokumentasi Kegiatan</h2>
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+          <div class="card h-100 card-hover">
+            <img src="assets/MC.jpeg" class="card-img-top" alt="Sertifikat MC">
+            <div class="card-body">
+              <h5 class="card-title">Master Of Ceremony</h5>
+              <p class="card-text">Menjadi Master of Ceremony di acara Knowlage Center</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+          <div class="card h-100 card-hover">
+            <img src="assets/MC Insevent.jpeg" class="card-img-top" alt="MC Insevent">
+            <div class="card-body">
+              <h5 class="card-title">Master Of Ceremony</h5>
+              <p class="card-text">Menjadi Master Of Ceremony di Acara Insevent 2025.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+          <div class="card h-100 card-hover">
+            <img src="assets/ISC.jpeg" class="card-img-top" alt="Panitia ISC">
+            <div class="card-body">
+              <h5 class="card-title">Panitia Inforsa System Competition</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+          <div class="card h-100 card-hover">
+            <img src="assets/Badminton.jpeg" class="card-img-top" alt="Dokumentasi Badminton">
+            <div class="card-body">
+              <h5 class="card-title">Juara 2 Badminton ISC</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+          <div class="card h-100 card-hover">
+            <img src="assets/koordinator Acara.jpg" class="card-img-top" alt="Koordinator acara 17 Agustus">
+            <div class="card-body">
+              <h5 class="card-title">Koordinator Acara 17 Agustus</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+          <div class="card h-100 card-hover">
+            <img src="assets/Vebronia Vitania Lusi.png" class="card-img-top" alt="Dokumentasi Baru">
+            <div class="card-body">
+              <h5 class="card-title">Anggota Departemen Profesional Skill Development</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Skill bar animation + number counting
+    window.addEventListener('scroll', () => {
+      const skills = document.querySelectorAll('.skill-bar');
+      skills.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 50 && !bar.dataset.animated){
+          bar.dataset.animated = true;
+          const progress = bar.querySelector('.skill-progress');
+          const target = parseInt(bar.getAttribute('data-percent'));
+          let count = 0;
+          const interval = setInterval(() => {
+            if(count >= target) clearInterval(interval);
+            progress.style.width = count + '%';
+            progress.textContent = count + '%';
+            count++;
+          }, 15);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
